@@ -15,7 +15,7 @@ export class RuntimeService {
   headers: Headers;
 
   constructor(private http: Http) {
-    this._dataStore = { runtimes: RUNTIMES };
+    this._dataStore = { runtimes: [] };
     this.runtimes$ = new Observable(observer => this._runtimeModelObserver = observer)
       .startWith(this._dataStore.runtimes)
       .share();
@@ -25,7 +25,7 @@ export class RuntimeService {
   }
 
   getRuntimes(): Observable<any> {
-    return this.http.get("/api/runtimes", {headers:this.headers})
+    return this.http.get("/api/runtimes", {headers: this.headers})
     .map(response => response.json());
   }
 
