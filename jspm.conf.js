@@ -11,6 +11,7 @@ System.config({
     "babel": "npm:babel-core@6.7.6",
     "babel-runtime": "npm:babel-runtime@6.6.1",
     "normalize.css": "github:necolas/normalize.css@3.0.3",
+    "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "rxjs": "npm:rxjs@5.0.0-beta.2",
     "zone.js": "npm:zone.js@0.6.10",
     "github:jspm/nodelibs-assert@0.1.0": {

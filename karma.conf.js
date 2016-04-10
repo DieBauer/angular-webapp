@@ -26,7 +26,7 @@ module.exports = function (config) {
 		],
 
 		// list of files / patterns to load in the browser (loaded before SystemJS)
-		files: [],
+		files: [ 'node_modules/traceur/bin/traceur-runtime.js'],
 
 		// list of files to exclude
 		exclude: [],
