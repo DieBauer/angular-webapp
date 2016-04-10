@@ -7,7 +7,7 @@ cache:
 notifications:
   email: true
 node_js:
-  - '4.2'
+  - '5.9'
 before_script:
   - npm prune
 before_install:
