@@ -2,9 +2,9 @@
 
 // import Angular 2
 import {Component} from "angular2/core";
-import {OnInit} from 'angular2/core';
-import {RuntimeService} from '../../modules/runtime/runtime.service';
-import {Runtime} from '../../modules/runtime/runtime.model';
+import {OnInit} from "angular2/core";
+import {RuntimeService} from "../../modules/runtime/runtime.service";
+import {Runtime} from "../../modules/runtime/runtime.model";
 
 @Component({
 	selector: "page-dashboard",
@@ -33,6 +33,6 @@ export class Dashboard implements OnInit {
 
         // Push the new list of runtimes into the Observable stream
     //    this._runtimeModelObserver.next(this._dataStore.runtimes);
-    }, error => console.log('Could not load runtimes.'));
+    }, error => console.log("Could not load runtimes."));
 	}
 }

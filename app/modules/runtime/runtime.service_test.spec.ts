@@ -1,8 +1,10 @@
-import {Http, HTTP_PROVIDERS, XHRBackend, ResponseOptions, Response, Headers} from 'angular2/http';
-import {MockBackend} from 'angular2/http/testing';
-import {Runtime} from './runtime.model';
-import {RuntimeService} from './runtime.service';
-import {RUNTIMES} from './mock-runtimes';
+//import "reflect-metadata"; // https://github.com/angular/angular/issues/5306
+import "reflect-metadata";
+import {Http, HTTP_PROVIDERS, XHRBackend, ResponseOptions, Response, Headers} from "angular2/http";
+import {MockBackend} from "angular2/http/testing";
+import {Runtime} from "./runtime.model";
+import {RuntimeService} from "./runtime.service";
+import {RUNTIMES} from "./mock-runtimes";
 import {
   describe,
   expect,
@@ -11,12 +13,11 @@ import {
   inject,
   injectAsync,
   beforeEachProviders
-} from 'angular2/testing';
-import {provide, Injector} from 'angular2/core';
-import "reflect-metadata"; // https://github.com/angular/angular/issues/5306
+} from "angular2/testing";
+import {provide, Injector} from "angular2/core";
 
 
-describe('Runtime Service', () => {
+describe("Runtime Service", () => {
 
   beforeEachProviders(() => {
   [
@@ -26,10 +27,9 @@ describe('Runtime Service', () => {
     ];
   });
 
-  it('should respect your expectation',
+  it("should respect your expectation",
     inject([RuntimeService, MockBackend],
-      (runtimeService, mockBackend) =>
-  {
+      (runtimeService, mockBackend) => {
     let response = RUNTIMES[0];
     let responseOptions = new ResponseOptions({body: response});
     mockBackend.connections.subscribe(
@@ -44,4 +44,4 @@ describe('Runtime Service', () => {
 
   }));
 
-})
+});

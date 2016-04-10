@@ -1,12 +1,12 @@
 export interface Runtime {
-  name: string
-  status: string
-  json: string
-  links: Array<string>
-  starttime: string
+  name: string;
+  status: string;
+  json: string;
+  links: Array<string>;
+  starttime: string;
 }
 
 export interface Links {
-  to: string
-  from: string
+  to: string;
+  from: string;
 }
