@@ -9,6 +9,8 @@ import {RouteConfig, Route, RouterOutlet, RouterLink, Router} from "angular2/rou
 
 // app components
 import {Home} from "../pages/home/home";
+import {Login} from "../pages/login/login";
+import {Dashboard} from "../pages/dashboard/dashboard";
 
 // app services
 //import {appServicesInjectables} from "core/services/services";
@@ -19,11 +21,12 @@ import {Home} from "../pages/home/home";
 	directives: [RouterOutlet, RouterLink]
 })
 @RouteConfig([
-	{ path: "/", component: Home, as: "Home", data: undefined } // the as serves as alias for links, etc
+	{ path: "/home", component: Home, as: "Home", data: undefined, useAsDefault: true },
+	{ path: "/login", component: Login, as: "Login" },
+	{ path: "/dashboard", component: Dashboard, as: "Dashboard" }
 ])
 export class App {
 	constructor() {
 		console.log("Application bootstrapped!");
 	}
 }
-
