@@ -10,7 +10,10 @@
   "homepage": "https://github.com/coral-streaming/",
   "bugs": "https://github.com/coral-streaming/",
   "keywords": [
-    "web"
+    "web",
+    "coral",
+    "coralGUI",
+    "realtime streaming"
   ],
   "private": true,
   "version": "0.0.1",
@@ -31,8 +34,8 @@
     "reflect-metadata": "^0.1.3",
     "zone.js": "^0.6.6",
     "es6-shim": "^0.35.0",
-    "rxjs": "5.0.0-beta.2",
-    "angular2": "2.0.0-beta.13"
+    "rxjs": "5.0.0-beta.5",
+    "angular2": "2.0.0-beta.14"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
