@@ -43,4 +43,21 @@ describe("Runtime Service", () => {
     });
   }));
 
+  it("should return the same runtimes when using mockservice",
+    inject([XHRBackend], (mockBackend) => {
+    let mockResponse = RUNTIMES;
+    let responseOptions = new ResponseOptions({body: mockResponse});
+    mockBackend.connections.subscribe(
+      (c: MockConnection) => c.mockRespond(new Response(responseOptions))
+    );
+
+    let runtimeService = new MockRuntimeService();
+    runtimeService.getRuntimes().subscribe(
+      runtimes => {
+        expect(runtimes.length).toBe(1);
+        expect(runtimes[0].name).toBe("runtime1");
+      }
+    )
+  }));
+
 });
