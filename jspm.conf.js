@@ -7,7 +7,7 @@ System.config({
   },
 
   map: {
-    "angular2": "npm:angular2@2.0.0-beta.14",
+    "angular2": "npm:angular2@2.0.0-beta.13",
     "babel": "npm:babel-core@6.7.6",
     "babel-runtime": "npm:babel-runtime@6.6.1",
     "normalize.css": "github:necolas/normalize.css@3.0.3",
@@ -85,7 +85,7 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:angular2@2.0.0-beta.14": {
+    "npm:angular2@2.0.0-beta.13": {
       "reflect-metadata": "npm:reflect-metadata@0.1.2",
       "rxjs": "npm:rxjs@5.0.0-beta.2",
       "zone.js": "npm:zone.js@0.6.10"

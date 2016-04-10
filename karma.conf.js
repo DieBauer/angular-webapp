@@ -84,7 +84,7 @@ module.exports = function (config) {
 		// doc: https://www.npmjs.com/package/karma-jspm
 		// reference config: https://github.com/gunnarlium/babel-jspm-karma-jasmine-istanbul
 		jspm: {
-			// Path to your SystemJS/JSPM configuration file 
+			// Path to your SystemJS/JSPM configuration file
 			config: "jspm.conf.js",
 
 			// Where to find jspm packages
@@ -102,7 +102,7 @@ module.exports = function (config) {
 				".tmp/**/!(*.spec).js" // make sure that all files are available
 			],
 
-			// SystemJS configuration specifically for tests, added after your config file. 
+			// SystemJS configuration specifically for tests, added after your config file.
 			// Good for adding test libraries and mock modules
 			paths: {}
 		}
