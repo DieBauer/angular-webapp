@@ -3,7 +3,6 @@ import {Observable} from "rxjs/Rx";
 import {Observer} from "rxjs/Observer";
 import {Runtime} from "./runtime.model";
 import {Injectable} from "angular2/core";
-import {RUNTIMES} from "./mock-runtimes";
 
 @Injectable()
 export class RuntimeService {
@@ -13,6 +12,7 @@ export class RuntimeService {
       runtimes: Runtime[]
   };
   headers: Headers;
+  private _endpoint: string;
 
   constructor(private http: Http) {
     this._dataStore = { runtimes: [] };
@@ -22,10 +22,13 @@ export class RuntimeService {
 
     this.headers = new Headers();
     this.headers.append("Content-Type", "application/json");
+    this.headers.append("Accept", "application/json");
+
+    this._endpoint = "http://localhost";
   }
 
   getRuntimes(): Observable<any> {
-    return this.http.get("/api/runtimes", {headers: this.headers})
+    return this.http.get(this._endpoint+"/api/runtimes", {headers: this.headers})
     .map(response => response.json());
   }
 

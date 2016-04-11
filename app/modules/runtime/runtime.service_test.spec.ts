@@ -57,7 +57,7 @@ describe("Runtime Service", () => {
         expect(runtimes.length).toBe(1);
         expect(runtimes[0].name).toBe("runtime1");
       }
-    )
+    );
   }));
 
 });

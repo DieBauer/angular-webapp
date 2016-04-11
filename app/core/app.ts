@@ -14,6 +14,7 @@ import {Dashboard} from "../pages/dashboard/dashboard";
 
 // app services
 //import {appServicesInjectables} from "core/services/services";
+//import {RuntimeService} from "../modules/runtime/runtime.service";
 
 @Component({
 	selector: "app",
