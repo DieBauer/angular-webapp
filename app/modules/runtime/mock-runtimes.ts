@@ -15,4 +15,8 @@ export class MockRuntimeService extends RuntimeService {
   //  console.log('sending fake answers!');
     return Observable.of(RUNTIMES);
   }
+
+  getRuntime(id: string) {
+    return Observable.of(RUNTIMES[0]);
+  }
 }

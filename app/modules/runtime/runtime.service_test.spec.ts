@@ -60,4 +60,20 @@ describe("Runtime Service", () => {
     );
   }));
 
+  it("should return the runtime when using specific id",
+    inject([XHRBackend], (mockBackend) => {
+    let mockResponse = RUNTIMES;
+    let responseOptions = new ResponseOptions({body: mockResponse});
+    mockBackend.connections.subscribe(
+      (c: MockConnection) => c.mockRespond(new Response(responseOptions))
+    );
+
+    let runtimeService = new MockRuntimeService();
+    runtimeService.getRuntime("test-runtime").subscribe(
+      runtime => {
+        expect(runtime.name).toBe("runtime1");
+      }
+    );
+  }));
+
 });
